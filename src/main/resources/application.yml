@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydb
+    username: myuser
+    password: mypassword
+    driver-class-name: org.postgresql.Driver
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/mydb
+    username: myuser
+    password: mypassword
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
